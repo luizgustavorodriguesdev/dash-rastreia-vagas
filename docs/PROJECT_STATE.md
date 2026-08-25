@@ -16,11 +16,12 @@ Construir um rastreador que encontre boas vagas, consolide fontes autorizadas, e
 - Estrutura operacional do Codex criada.
 - Laravel 12 com Breeze, Blade, Tailwind CSS e autenticacao inicial instalado.
 - Ambiente verificado com PHP 8.2, Composer local, Node 24 e MariaDB 10.4 do XAMPP.
-- Build de frontend concluido; banco MySQL `dash-rastreia-vagas` criado e migrations iniciais aplicadas.
+- Build de frontend concluido; banco MySQL `dash-rastreia-vagas` criado e migrations aplicadas.
+- Dominio inicial implementado com fontes, empresas, vagas, tecnologias, factories, relacionamentos e integridade de importacao.
 
 ## Proximas decisoes
 
-- Autenticacao inicial e modelo de perfil profissional.
+- Modelo de perfil profissional e preferencias do usuario.
 - Primeira fonte de vagas autorizada para o MVP.
 - Repositorio remoto configurado em `https://github.com/luizgustavorodriguesdev/dash-rastreia-vagas.git`.
 
