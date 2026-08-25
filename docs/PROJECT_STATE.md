@@ -20,6 +20,7 @@ Construir um rastreador que encontre boas vagas, consolide fontes autorizadas, e
 - Dominio inicial implementado com fontes, empresas, vagas, tecnologias, factories, relacionamentos e integridade de importacao.
 - Camada de importacao implementada com contrato de conectores, validacao, idempotencia, auditoria, falha parcial e execucao em fila por fonte.
 - Sincronizacao manual definida para a fase inicial; conector Remotive e comando `jobs:sync` implementados sem agendamento.
+- Dashboard autenticado implementado com busca, filtros persistentes, paginacao, cards responsivos e detalhes seguros da vaga.
 
 ## Proximas decisoes
 
