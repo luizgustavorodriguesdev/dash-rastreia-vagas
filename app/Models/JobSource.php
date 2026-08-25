@@ -25,4 +25,9 @@ class JobSource extends Model
     {
         return $this->hasMany(JobListing::class);
     }
+
+    public function importRuns(): HasMany
+    {
+        return $this->hasMany(JobImportRun::class);
+    }
 }

@@ -67,6 +67,12 @@ Os testes usam SQLite em memória e não alteram o banco MySQL local.
 
 As integrações devem usar APIs oficiais, feeds ou meios expressamente permitidos. O projeto não deve contornar autenticação, CAPTCHA, `robots.txt` ou termos de uso dos portais.
 
+## Arquitetura de importação
+
+Cada fonte implementa `JobSourceConnector` e entrega registros no formato normalizado. `ImportJobsFromSource` valida e persiste cada item em uma transação independente, enquanto `RunJobSourceImport` executa o conector pela fila com timeout, retentativas e exclusividade por fonte.
+
+Cada execução fica registrada em `job_import_runs`, incluindo totais criados, atualizados, inalterados e inválidos. A chave composta `job_source_id + external_id` impede duplicidade durante reimportações.
+
 ## Estado do projeto
 
 As decisões confirmadas e o estado atual ficam registrados em [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md).

@@ -18,6 +18,7 @@ Construir um rastreador que encontre boas vagas, consolide fontes autorizadas, e
 - Ambiente verificado com PHP 8.2, Composer local, Node 24 e MariaDB 10.4 do XAMPP.
 - Build de frontend concluido; banco MySQL `dash-rastreia-vagas` criado e migrations aplicadas.
 - Dominio inicial implementado com fontes, empresas, vagas, tecnologias, factories, relacionamentos e integridade de importacao.
+- Camada de importacao implementada com contrato de conectores, validacao, idempotencia, auditoria, falha parcial e execucao em fila por fonte.
 
 ## Proximas decisoes
 
