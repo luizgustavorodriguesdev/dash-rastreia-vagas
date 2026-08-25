@@ -73,6 +73,16 @@ Cada fonte implementa `JobSourceConnector` e entrega registros no formato normal
 
 Cada execução fica registrada em `job_import_runs`, incluindo totais criados, atualizados, inalterados e inválidos. A chave composta `job_source_id + external_id` impede duplicidade durante reimportações.
 
+### Sincronização manual
+
+A primeira fonte disponível é a API pública da Remotive. Para importar até 50 vagas:
+
+```bash
+php artisan jobs:sync remotive --limit=50
+```
+
+O limite aceito é de 1 a 100 por execução. Não existe agendamento automático nesta fase. As vagas mantêm a URL original e devem exibir “Remotive” como fonte, atendendo às regras de atribuição da API.
+
 ## Estado do projeto
 
 As decisões confirmadas e o estado atual ficam registrados em [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md).

@@ -19,11 +19,12 @@ Construir um rastreador que encontre boas vagas, consolide fontes autorizadas, e
 - Build de frontend concluido; banco MySQL `dash-rastreia-vagas` criado e migrations aplicadas.
 - Dominio inicial implementado com fontes, empresas, vagas, tecnologias, factories, relacionamentos e integridade de importacao.
 - Camada de importacao implementada com contrato de conectores, validacao, idempotencia, auditoria, falha parcial e execucao em fila por fonte.
+- Sincronizacao manual definida para a fase inicial; conector Remotive e comando `jobs:sync` implementados sem agendamento.
 
 ## Proximas decisoes
 
 - Modelo de perfil profissional e preferencias do usuario.
-- Primeira fonte de vagas autorizada para o MVP.
+- Avaliar a proxima fonte autorizada depois de validar a qualidade dos dados Remotive.
 - Repositorio remoto configurado em `https://github.com/luizgustavorodriguesdev/dash-rastreia-vagas.git`.
 
 ## Regra de manutencao

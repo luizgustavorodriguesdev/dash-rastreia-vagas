@@ -20,10 +20,10 @@ class JobListing extends Model
     public const STATUS_CLOSED = 'closed';
 
     protected $fillable = [
-        'job_source_id', 'company_id', 'external_id', 'title', 'description',
+        'job_source_id', 'company_id', 'external_id', 'title', 'category', 'description',
         'url', 'employment_type', 'workplace_type', 'seniority', 'city', 'state',
-        'country_code', 'salary_min', 'salary_max', 'salary_currency',
-        'salary_period', 'status', 'content_hash', 'raw_payload', 'published_at',
+        'country_code', 'location_text', 'salary_min', 'salary_max', 'salary_currency',
+        'salary_period', 'salary_text', 'status', 'content_hash', 'raw_payload', 'published_at',
         'expires_at', 'imported_at',
     ];
 
